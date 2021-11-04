@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Poppins',
+  sans-serif;
+}
+
+body {
+  background: -webkit-linear-gradient(60deg, rgb(250, 178, 44) 50%, rgb(255, 109, 255) 50%);
+
+  min-height: 450px;
+}
+
+/* Header */
+header {
+  height: 20vh;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Image */
+header img {
+  width: 100px;
+  border-radius: 50%;
+  border: 5px rgb(72, 72, 250) solid;
+}
+
+/* Container */
+.container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+
+  height: 70vh;
+  min-height: 450px;
+}
+
+/* Divisions */
+.divOne {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.divTwo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Division One */
+.divOne section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.divOne h1 {
+  font-size: 40px;
+}
+
+/* Button */
+
+.divOne button {
+  font-size: 16px;
+  font-weight: 500;
+  height: 4rem;
+  width: 12rem;
+  transition: .4s;
+  background: rgb(253, 221, 37);
+
+  border: 7px rgb(224, 61, 224) outset;
+}
+
+.divOne button:hover {
+  cursor: pointer;
+  transition: .4s;
+  background: rgb(245, 127, 245);
+}
+
+/* Division Two */
+.divTwo p {
+  display: flex;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+
+  width: min(40vw, 500px);
+}
+
+/* Footer */
+footer {
+  height: 10vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  padding: 1rem;
+}
+
+footer a img {
+  margin: -1rem;
+  width: 40px;
+}
+
+footer a:first-child img {
+  margin-right: .5rem;
+}
+
+@media (min-width: 900px) {
+  header img {
+    width: 120px;
+  }
+}
