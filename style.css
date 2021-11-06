@@ -13,6 +13,25 @@ body {
   min-height: 450px;
 }
 
+.button {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  height: 3rem;
+  width: 5rem;
+  transition: .4s;
+  background: rgb(29, 25, 3);
+  border-radius: .5rem;
+
+  border: none;
+}
+
+.button:hover {
+  cursor: pointer;
+  transition: .4s;
+  background: rgb(134, 134, 134);
+}
+
 /* Header */
 header {
   height: 20vh;
@@ -114,8 +133,58 @@ footer a img {
   width: 40px;
 }
 
-footer a:first-child img {
+footer a img {
   margin-right: .5rem;
+}
+
+/* Modal */
+.modal {
+  display: none;
+}
+
+.modal.active {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalCanvas {
+  padding: 2rem 1rem;
+  background: white;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalCanvas a img {
+  height: 300px;
+  border-radius: .5rem;
+  padding-right: 1rem;
+}
+
+/* Modal Button */
+.modalCanvas button {
+  height: 300px;
+  margin-bottom: 5px;
+  background: rgb(241, 238, 238);
+}
+
+.modalCanvas button:hover {
+  cursor: pointer;
+  transition: .4s;
+  background: rgb(252, 99, 112);
+}
+
+.modalCanvas button img {
+  width: 50px;
 }
 
 @media (min-width: 900px) {
