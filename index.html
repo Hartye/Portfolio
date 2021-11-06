@@ -39,14 +39,30 @@
     </main>
     <footer>
       <!-- Social midia -->
-      <a
-        href="https://www.linkedin.com/in/carlos-daniel-274a55219/"
-        target="__blank"
-        ><img src="images/linkedin.png" alt="Linkedin"
-      /></a>
-      <a href="https://github.com/hartye" target="__blank"
-        ><img src="images/github.png" alt="Github"
-      /></a>
+      <div class="contactMe">
+        <a
+          href="https://www.linkedin.com/in/carlos-daniel-274a55219/"
+          target="__blank"
+          ><img src="images/linkedin.png" alt="Linkedin"
+        /></a>
+        <a href="https://github.com/hartye" target="__blank"
+          ><img src="images/github.png" alt="Github"
+        /></a>
+      </div>
+      <div class="MyProjects">
+        <button onclick="swap()" class="button">Projects</button>
+      </div>
     </footer>
+    <section class="modal">
+      <div class="modalCanvas">
+        <a href="https://hartye.github.io/dev.finances" target="__blank">
+          <img src="images/devFinances.png" alt="Dev.Finances" />
+        </a>
+        <button class="button" onclick="swap()">
+          <img src="images/closeModal.svg" alt="Close" />
+        </button>
+      </div>
+    </section>
+    <script src="scripts.js"></script>
   </body>
 </html>
