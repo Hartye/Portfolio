@@ -5,12 +5,10 @@ function swap() {
 
 function slide() {
   let img = document.querySelector(".right-slide-img");
-  let slide_first = document.querySelector(".divOne");
-  let slide_second = document.querySelector(".divTwo");
   let body = document.querySelector(".body");
-  slide_first.classList.toggle("slide");
-  slide_second.classList.toggle("slide");
+  let main = document.querySelector(".container");
   body.classList.toggle("swap");
+  main.classList.toggle("swap");
 
   if (img.src.match("svg/right-arrow-alt.svg")) {
     img.src = "svg/left-arrow-alt.svg";
