@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -77,6 +81,40 @@ header div:last-child > img:hover {
 
   height: 70vh;
   min-height: 450px;
+  transition: all .5s ease-in-out;
+}
+
+.container.swap {
+  transform: translateX(-100%);
+}
+
+.second-slide {
+  position: absolute;
+  left: 120%;
+  height: 500px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.second-slide img {
+  border: 5px solid #fab22c;
+}
+
+.second-slide > div > img {
+  width: max(410px, 31vw);
+  margin-bottom: max(5px, 1vh);
+}
+
+.second-double {
+  display: flex;
+}
+
+.second-double img {
+  width: max(200px, 15vw);
+  margin: 0 1vw 0 0;
 }
 
 /* Divisions */
@@ -93,23 +131,6 @@ header div:last-child > img:hover {
 .divTwo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  transition: all .5s ease-in-out;
-}
-
-.divOne.slide,
-.divTwo.slide {
-  transform: translateX(-100%);
-}
-
-.divThree {
-  display: none;
-  transform: translateX(100%);
-  transition: all .5s ease-in-out;
-}
-
-.divThree.slide {
-  display: grid;
-  transform: translateX(0);
 }
 
 /* Division One */
@@ -226,8 +247,82 @@ footer a img {
   width: 50px;
 }
 
+/* Responsive */
 @media (min-width: 900px) {
   header img {
     width: 120px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .second-slide {
+    left: 115%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .second-slide {
+    left: 110%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .second-slide {
+    left: 132%;
+    grid-template-columns: 1fr;
+  }
+
+  .second-double {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .second-slide {
+    left: 130%;
+  }
+}
+
+@media (max-width: 900px) {
+  .second-slide {
+    left: 125%;
+  }
+}
+
+@media (max-width: 800px) {
+  .second-slide {
+    left: 120%;
+  }
+
+  .divOne {
+    grid-template-columns: 1fr;
+  }
+
+  .divOne a {
+    margin: auto;
+  }
+
+  .divOne h1 {
+    font-size: 2rem;
+  }
+
+  .divTwo p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .second-slide > div > img {
+    width: max(300px, 50vw);
+  }
+
+  .divOne h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .second-slide {
+    left: 115%;
   }
 }
